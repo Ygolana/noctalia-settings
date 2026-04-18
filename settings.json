@@ -21,9 +21,9 @@
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
-        "showCategories": true,
+        "showCategories": false,
         "showIconBackground": false,
-        "sortByMostUsed": true,
+        "sortByMostUsed": false,
         "terminalCommand": "alacritty -e",
         "viewMode": "list"
     },
@@ -43,7 +43,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.58,
-        "barType": "floating",
+        "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.3,
         "contentPadding": 2,
@@ -64,7 +64,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": false,
-        "position": "top",
+        "position": "bottom",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -79,50 +79,20 @@
         "widgets": {
             "center": [
                 {
-                    "characterCount": 2,
-                    "colorizeIcons": false,
-                    "emptyColor": "secondary",
-                    "enableScrollWheel": true,
-                    "focusedColor": "primary",
-                    "followFocusedScreen": false,
-                    "fontWeight": "bold",
-                    "groupedBorderOpacity": 1,
-                    "hideUnoccupied": false,
-                    "iconScale": 0.8,
-                    "id": "Workspace",
-                    "labelMode": "none",
-                    "occupiedColor": "secondary",
-                    "pillSize": 0.6,
-                    "showApplications": false,
-                    "showApplicationsHover": false,
-                    "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
-                    "unfocusedIconsOpacity": 1
-                }
-            ],
-            "left": [
-                {
-                    "colorizeSystemIcon": "primary",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": true
-                },
-                {
-                    "clockColor": "secondary",
+                    "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm",
                     "formatVertical": "HH mm",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
+                }
+            ],
+            "left": [
                 {
                     "compactMode": true,
                     "diskPath": "/",
-                    "iconColor": "secondary",
+                    "iconColor": "none",
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
@@ -182,14 +152,6 @@
                     ]
                 },
                 {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "secondary",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
-                },
-                {
                     "deviceNativePath": "__default__",
                     "displayMode": "icon-only",
                     "hideIfIdle": true,
@@ -200,26 +162,24 @@
                 },
                 {
                     "displayMode": "alwaysHide",
-                    "iconColor": "secondary",
+                    "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "primary"
+                    "textColor": "none"
                 },
                 {
-                    "applyToAllMonitors": false,
                     "displayMode": "alwaysHide",
-                    "iconColor": "secondary",
-                    "id": "Brightness",
-                    "textColor": "primary"
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "secondary",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "none"
                 }
             ]
         }
@@ -239,11 +199,11 @@
             },
             {
                 "enabled": true,
-                "id": "calendar-month-card"
+                "id": "weather-card"
             },
             {
                 "enabled": true,
-                "id": "weather-card"
+                "id": "calendar-month-card"
             }
         ]
     },
@@ -265,14 +225,6 @@
                 "id": "profile-card"
             },
             {
-                "enabled": true,
-                "id": "shortcuts-card"
-            },
-            {
-                "enabled": true,
-                "id": "audio-card"
-            },
-            {
                 "enabled": false,
                 "id": "brightness-card"
             },
@@ -281,8 +233,16 @@
                 "id": "weather-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "media-sysmon-card"
+            },
+            {
+                "enabled": true,
+                "id": "audio-card"
+            },
+            {
+                "enabled": true,
+                "id": "shortcuts-card"
             }
         ],
         "diskPath": "/",
@@ -330,11 +290,11 @@
         "animationSpeed": 1,
         "backgroundOpacity": 1,
         "colorizeIcons": false,
-        "deadOpacity": 0.6,
+        "deadOpacity": 1,
         "displayMode": "auto_hide",
-        "dockType": "floating",
+        "dockType": "attached",
         "enabled": true,
-        "floatingRatio": 1.23,
+        "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
         "groupContextMenuMode": "extended",
@@ -343,27 +303,31 @@
         "indicatorColor": "primary",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 3,
-        "launcherIcon": "",
+        "launcherIcon": "brand-windows-filled",
         "launcherIconColor": "none",
-        "launcherPosition": "end",
+        "launcherPosition": "start",
         "launcherUseDistroLogo": false,
         "monitors": [
         ],
         "onlySameOutput": true,
         "pinnedApps": [
+            "org.gnome.Meld",
+            "zen",
+            "org.cachyos.scx-manager",
+            "com.shellyorg.shelly"
         ],
         "pinnedStatic": false,
-        "position": "bottom",
+        "position": "right",
         "showDockIndicator": false,
-        "showLauncherIcon": false,
+        "showLauncherIcon": true,
         "sitOnFrame": false,
-        "size": 0.87
+        "size": 1
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 0.45,
+        "animationSpeed": 0.47000000000000003,
         "autoStartAuth": false,
         "avatarImage": "/home/flrou/Pictures/pfp/zairon.jpg",
         "boxRadiusRatio": 1,
@@ -463,11 +427,11 @@
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true,
+        "weatherShowEffects": false,
         "weatherTaliaMascotAlways": false
     },
     "network": {
-        "bluetoothAutoConnect": false,
+        "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 60000,
@@ -641,10 +605,10 @@
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.58,
+        "panelBackgroundOpacity": 0.5700000000000001,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
-        "settingsPanelMode": "attached",
+        "settingsPanelMode": "centered",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
         "translucentWidgets": true
